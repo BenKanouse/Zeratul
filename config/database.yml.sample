@@ -1,0 +1,16 @@
+all_the_things: &all_the_things
+  adapter: postgresql
+  pool: 5
+  /* username: <your postgres_username> */
+
+development:
+  <<: *all_the_things
+  database: zeratul_development
+
+test:
+  <<: *all_the_things
+  database: zeratul_test
+
+production:
+  <<: *all_the_things
+  database: zeratul_production
