@@ -11,20 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130410234127) do
-
-  create_table "anti_team_players", :force => true do |t|
-    t.integer  "fantasy_team_id"
-    t.integer  "player_id"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-  end
+ActiveRecord::Schema.define(:version => 20130411234751) do
 
   create_table "fantasy_team_players", :force => true do |t|
     t.integer  "fantasy_team_id"
     t.integer  "player_id"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.string   "type"
   end
 
   create_table "fantasy_teams", :force => true do |t|
