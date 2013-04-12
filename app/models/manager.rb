@@ -1,3 +1,3 @@
 class Manager < ActiveRecord::Base
-	has_one :fantasy_team
+  has_one :fantasy_team
 end
