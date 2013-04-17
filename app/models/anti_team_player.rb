@@ -1,0 +1,2 @@
+class AntiTeamPlayer < FantasyTeamPlayer
+end
