@@ -1,6 +1,8 @@
 require "bundler/capistrano"
+require "rvm/capistrano"
+load "deploy/assets"
 
-set :rvm_ruby_string, "ruby-2.0.0@Zeratul"
+set :rvm_ruby_string, "ruby-2.0.0-p0@Zeratul"
 
 set :application, "Zeratul"
 set :deploy_to, "/home/zeratul"
