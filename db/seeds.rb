@@ -9,5 +9,7 @@
 manager = Manager.create({name: "Ben"})
 pro_team = ProTeam.create({name: "SKT"})
 players = Player.create([{name: "Flash"},{name: "BByong"}])
+league = League.create({name: "conservative_party_house"})
 fantasy_team = FantasyTeam.create({name: "bigbenjiblue", pro_team: pro_team, manager: manager,
-	           main_players: [players.first], anti_players: [players.last]})
+	           main_players: [players.first], anti_players: [players.last],
+	           leagues: [league]})
