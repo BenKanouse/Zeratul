@@ -1,5 +1,6 @@
 require "bundler/capistrano"
 require "rvm/capistrano"
+require 'capistrano-unicorn'
 load "deploy/assets"
 
 set :rvm_ruby_string, "ruby-2.0.0-p0@Zeratul"
@@ -36,3 +37,5 @@ after "deploy:update_code", "deploy:migrate"
 before "deploy:finalize_update", "configs:symlink"
 
 after "deploy:restart", "deploy:cleanup"
+after 'deploy:restart', 'unicorn:reload' # app IS NOT preloaded
+after 'deploy:restart', 'unicorn:restart'  # app preloaded
