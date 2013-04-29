@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/ericam/susy.git
+  revision: 47cf7bb5447f2d01115ec5728e5b6694403528ae
+  specs:
+    susy (1.0.8)
+      compass (>= 0.12.2)
+      sass (>= 3.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -41,8 +49,12 @@ GEM
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
+<<<<<<< HEAD
     capistrano-unicorn (0.1.7)
       capistrano
+=======
+    chunky_png (1.2.8)
+>>>>>>> Bunch more shit
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -50,6 +62,18 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
+<<<<<<< HEAD
+=======
+    compass (0.12.2)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
+    compass-colors (0.9.0)
+      compass (>= 0.8.7)
+    compass-rails (1.0.3)
+      compass (>= 0.12.2, < 0.14)
+    daemons (1.1.9)
+>>>>>>> Bunch more shit
     eco (1.0.0)
       coffee-script
       eco-source
@@ -57,6 +81,7 @@ GEM
     eco-source (1.1.0.rc.1)
     ejs (1.1.1)
     erubis (2.7.0)
+<<<<<<< HEAD
     execjs (1.4.0)
       multi_json (~> 1.0)
     haml (4.0.2)
@@ -66,6 +91,12 @@ GEM
       activesupport (>= 3.1, < 4.1)
       haml (>= 3.1, < 4.1)
       railties (>= 3.1, < 4.1)
+=======
+    eventmachine (1.0.3)
+    execjs (1.4.0)
+      multi_json (~> 1.0)
+    fssm (0.2.10)
+>>>>>>> Bunch more shit
     highline (1.6.18)
     hike (1.2.2)
     i18n (0.6.1)
@@ -74,8 +105,11 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.7.7)
+<<<<<<< HEAD
     kgio (2.8.0)
     libv8 (3.11.8.17)
+=======
+>>>>>>> Bunch more shit
     mail (2.5.3)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -113,11 +147,17 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
+<<<<<<< HEAD
     raindrops (0.11.0)
     rake (10.0.4)
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.4)
+=======
+    rake (10.0.4)
+    rdoc (3.12.2)
+      json (~> 1.4)
+>>>>>>> Bunch more shit
     rvm-capistrano (1.3.0)
       capistrano (>= 2.0.0)
     sass (3.2.8)
@@ -125,14 +165,27 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+<<<<<<< HEAD
+=======
+    sassy-buttons (0.1.4)
+      compass (>= 0.12.2)
+      sass (>= 3.2.0)
+>>>>>>> Bunch more shit
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+<<<<<<< HEAD
     therubyracer (0.11.4)
       libv8 (~> 3.11.8.12)
       ref
+=======
+    thin (1.5.1)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
+>>>>>>> Bunch more shit
     thor (0.18.1)
     tilt (1.3.7)
     treetop (1.4.12)
@@ -142,10 +195,13 @@ GEM
     uglifier (2.0.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+<<<<<<< HEAD
     unicorn (4.6.2)
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+=======
+>>>>>>> Bunch more shit
 
 PLATFORMS
   ruby
@@ -153,14 +209,27 @@ PLATFORMS
 DEPENDENCIES
   backbone-on-rails
   capistrano (~> 2.14.2)
+<<<<<<< HEAD
   capistrano-unicorn
   coffee-rails (~> 3.2.1)
   haml-rails
+=======
+  coffee-rails (~> 3.2.1)
+  compass-colors
+  compass-rails
+>>>>>>> Bunch more shit
   jquery-rails (~> 2.2.1)
   pg (~> 0.12)
   rails (~> 3.2.13)
   rvm-capistrano (~> 1.3.0)
   sass-rails (~> 3.2.3)
+<<<<<<< HEAD
   therubyracer
   uglifier (>= 1.0.3)
   unicorn (~> 4.6.2)
+=======
+  sassy-buttons
+  susy!
+  thin
+  uglifier (>= 1.0.3)
+>>>>>>> Bunch more shit
