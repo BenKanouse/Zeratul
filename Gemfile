@@ -26,3 +26,7 @@ group :development do
   gem 'capistrano-unicorn', :require => false
   gem 'rvm-capistrano', '~> 1.3.0'
 end
+
+group :development, :test do
+  gem "minitest"
+end
