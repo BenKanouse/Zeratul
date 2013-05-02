@@ -11,13 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130410234127) do
+ActiveRecord::Schema.define(:version => 20130428234326) do
 
-  create_table "anti_team_players", :force => true do |t|
-    t.integer  "fantasy_team_id"
-    t.integer  "player_id"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+  create_table "dashboards", :force => true do |t|
+    t.string   "index"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "fantasy_team_players", :force => true do |t|
@@ -25,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20130410234127) do
     t.integer  "player_id"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.string   "type"
   end
 
   create_table "fantasy_teams", :force => true do |t|
@@ -37,8 +37,35 @@ ActiveRecord::Schema.define(:version => 20130410234127) do
     t.datetime "updated_at",          :null => false
   end
 
+  create_table "fantasy_teams_leagues", :force => true do |t|
+    t.integer "league_id"
+    t.integer "fantasy_team_id"
+  end
+
+  create_table "games", :force => true do |t|
+    t.integer  "match_id"
+    t.integer  "map_id"
+    t.integer  "number"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "leagues", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "managers", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "matches", :force => true do |t|
+    t.integer  "week"
+    t.integer  "round"
+    t.date     "date"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -53,10 +80,25 @@ ActiveRecord::Schema.define(:version => 20130410234127) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "players_games", :force => true do |t|
+    t.integer  "player_id"
+    t.integer  "game_id"
+    t.boolean  "win"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "pro_teams", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "pro_teams_matches", :force => true do |t|
+    t.integer  "pro_team_id"
+    t.integer  "match_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end

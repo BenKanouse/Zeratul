@@ -1,0 +1,2 @@
+class MainTeamPlayer < FantasyTeamPlayer
+end

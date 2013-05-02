@@ -1,4 +1,3 @@
-class AntiTeamPlayer < ActiveRecord::Base
-	belongs_to :fantasy_team
-	belongs_to :player
+class AntiTeamPlayer < FantasyTeamPlayer
+
 end
