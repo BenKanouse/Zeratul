@@ -1,0 +1,11 @@
+#dashboard_index
+  Lol K
+
+:javascript
+  $(function() {
+    // Blog is the app name
+    window.router = new Blog.Routers.PostsRouter({
+      posts: = @posts.to_json.html_safe 
+    });
+    Backbone.history.start();
+  });
