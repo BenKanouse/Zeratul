@@ -21,6 +21,7 @@ group :assets do
 end
 
 group :development do
+  gem 'vagrant'
   gem 'capistrano',     '~> 2.14.2'
   gem 'capistrano-unicorn', :require => false
   gem 'rvm-capistrano', '~> 1.3.0'
