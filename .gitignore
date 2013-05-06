@@ -3,6 +3,7 @@
 
 /config/database.yml
 /config/initializers/secret_token.rb
+/.rvmrc
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
