@@ -9,7 +9,7 @@ gem 'unicorn',        '~> 4.6.2'
 group :assets do
 
   gem 'compass-rails'
-  gem 'susy', git: "git://github.com/ericam/susy.git"
+  gem 'susy'
   
   gem 'compass-colors'
   gem 'sassy-buttons'
@@ -24,8 +24,10 @@ group :development do
   gem 'capistrano',     '~> 2.14.2'
   gem 'capistrano-unicorn', :require => false
   gem 'rvm-capistrano', '~> 1.3.0'
+  gem 'guard-minitest'
+  gem 'rb-fsevent', '~> 0.9'
 end
 
 group :development, :test do
-  gem "minitest"
+  gem "minitest-spec-rails"
 end
