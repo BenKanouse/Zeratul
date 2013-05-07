@@ -30,5 +30,7 @@ group :development do
 end
 
 group :development, :test do
-  gem "minitest-spec-rails"
+
+  gem "minitest-rails"
+  gem "minitest-rails-capybara"
 end
