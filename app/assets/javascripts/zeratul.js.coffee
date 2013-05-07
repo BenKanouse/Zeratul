@@ -6,3 +6,4 @@ window.Zeratul =
 
 $(document).ready ->
   Zeratul.initialize()
+  console.log("gross")
