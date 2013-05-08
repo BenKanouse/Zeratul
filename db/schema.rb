@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130428234326) do
+ActiveRecord::Schema.define(:version => 20130507042601) do
 
   create_table "dashboards", :force => true do |t|
     t.string   "index"
@@ -84,6 +84,13 @@ ActiveRecord::Schema.define(:version => 20130428234326) do
     t.integer  "player_id"
     t.integer  "game_id"
     t.boolean  "win"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "points", :force => true do |t|
+    t.integer  "player_id"
+    t.integer  "reason_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
