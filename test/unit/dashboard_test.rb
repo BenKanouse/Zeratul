@@ -1,7 +1,7 @@
 require 'test_helper'
 
-class DashboardTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+describe Dashboard do
+  it "should speak the truth" do
+    assert true
+  end
 end
