@@ -26,10 +26,11 @@ group :development do
   gem 'capistrano-unicorn', :require => false
   gem 'rvm-capistrano', '~> 1.3.0'
   gem 'guard-minitest'
-  gem 'rb-fsevent', '~> 0.9'
+  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
 end
 
 group :development, :test do
   gem "minitest-rails"
   gem "minitest-rails-capybara"
+  gem "mocha", :require => false
 end
