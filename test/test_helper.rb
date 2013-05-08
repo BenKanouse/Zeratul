@@ -4,8 +4,8 @@ require File.expand_path("../../config/environment", __FILE__)
 require "rails/test_help"
 require "minitest/autorun"
 require "minitest/rails"
-require "minitest/rails/capybara"
-require "mocha/setup"
+# require "minitest/rails/capybara"
+# require "mocha/setup"
 #require "minitest/pride"
 
 class ActiveSupport::TestCase
