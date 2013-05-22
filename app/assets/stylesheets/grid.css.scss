@@ -1,0 +1,24 @@
+@import "screen";
+
+#container {  
+  @include container();
+  @include at-breakpoint(30em 8) {
+    // Establish our new 8-column container.
+    @include container();
+  }
+
+  .left-sidebar {  
+  @include span-columns(3 alpha, 12);  
+  background: red;
+}
+
+  .main-content {  
+    @include span-columns(6, 12);
+    background: yellow;
+  }
+
+  .right-sidebar {  
+    @include span-columns(3 omega, 12);  
+    background: blue;
+  }
+}
