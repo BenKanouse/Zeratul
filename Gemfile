@@ -7,8 +7,8 @@ gem 'unicorn',        '~> 4.6.2'
 group :assets do
   gem 'jquery-rails',   '~> 2.2.1'
   gem 'haml-rails'
-  gem 'compass-rails'
-  gem 'susy'
+  gem 'compass-rails', '>= 1.0.3'
+  gem "susy", "~> 1.0.8"
   gem 'compass-colors'
   gem 'sassy-buttons'
   gem 'sass-rails',   '~> 3.2.3'

@@ -243,7 +243,7 @@ DEPENDENCIES
   capistrano-unicorn
   coffee-rails (~> 3.2.1)
   compass-colors
-  compass-rails
+  compass-rails (>= 1.0.3)
   guard-minitest
   haml-rails
   jquery-rails (~> 2.2.1)
@@ -259,7 +259,7 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   sassy-buttons
   spork-testunit
-  susy
+  susy (~> 1.0.8)
   therubyracer
   turn
   uglifier (>= 1.0.3)
