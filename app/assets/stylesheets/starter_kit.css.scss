@@ -1,4 +1,14 @@
-body {
+html {
   font: Helvetica;
   font-size: 14pt;
+  background: #666 url('/assets/starcraft-ii-backgrounds-desktop.jpg');
+
+}
+
+/* header */
+
+#header {
+  background: white;
+  height: 75px;
+  border-bottom: #dcdcdc solid 1px;
 }
