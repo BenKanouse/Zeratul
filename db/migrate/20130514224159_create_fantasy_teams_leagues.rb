@@ -3,6 +3,7 @@ class CreateFantasyTeamsLeagues < ActiveRecord::Migration
     create_table :fantasy_teams_leagues do |t|
       t.integer  :league_id
       t.integer  :fantasy_team_id
+      t.timestamps
     end
   end
 

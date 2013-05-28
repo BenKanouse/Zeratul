@@ -1,0 +1,2 @@
+class AntiTeamProPlayer < FantasyTeamsProPlayer
+end

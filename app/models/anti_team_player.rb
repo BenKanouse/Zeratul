@@ -1,3 +1,0 @@
-class AntiTeamPlayer < FantasyTeamPlayer
-
-end

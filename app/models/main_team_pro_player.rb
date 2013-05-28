@@ -1,0 +1,2 @@
+class MainTeamProPlayer < FantasyTeamsProPlayer
+end

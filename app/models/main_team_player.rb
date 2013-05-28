@@ -1,2 +1,0 @@
-class MainTeamPlayer < FantasyTeamPlayer
-end
