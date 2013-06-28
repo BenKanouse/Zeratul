@@ -1,0 +1,13 @@
+@import "compass/utilities/tables";
+@mixin table {
+  width: 100%;
+  $table-color: #dcdcdc;
+  @include table-scaffolding;
+  @include inner-table-borders(1px, darken($table-color, 40%));
+  @include outer-table-borders(1px);
+  @include alternating-rows-and-columns($table-color, adjust-hue($table-color, -120deg), #222222); 
+}
+
+.players {
+  @include table;
+}
