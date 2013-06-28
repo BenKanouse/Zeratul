@@ -7,6 +7,8 @@
         %td Current Week Score
         %td Week Points
         %td Overall Points
+        %td Team
+        %td Matches link
     - @fantasy_players.each do |fantasy_player|
       - p = fantasy_player.pro_player
       %tbody
@@ -19,6 +21,10 @@
             16
           %td
             INFINITY!!!
+          %td
+            Kt Rolster
+          %td
+            = link_to "LINKED", "#"
 
 :javascript
   $(function() {

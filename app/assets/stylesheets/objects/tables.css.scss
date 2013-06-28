@@ -1,11 +1,12 @@
 @import "compass/utilities/tables";
+// alternating-rows-and-columns($even-row-color, $odd-row-color, $dark-intersection, $header-color, $footer-color)
 @mixin table {
   width: 100%;
   $table-color: #dcdcdc;
   @include table-scaffolding;
   @include inner-table-borders(1px, darken($table-color, 40%));
   @include outer-table-borders(1px);
-  @include alternating-rows-and-columns($table-color, adjust-hue($table-color, -120deg), #222222); 
+  @include alternating-rows-and-columns($table-color, adjust-hue($table-color, -10deg), #222222); 
   a {
     position: relative;
     float: left;
