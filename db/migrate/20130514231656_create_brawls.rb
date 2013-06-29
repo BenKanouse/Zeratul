@@ -1,6 +1,6 @@
-class CreateMatches < ActiveRecord::Migration
+class CreateBrawls < ActiveRecord::Migration
   def up
-    create_table :matches do |t|
+    create_table :brawls do |t|
       t.integer  :week
       t.integer  :round
       t.date     :date
@@ -10,6 +10,6 @@ class CreateMatches < ActiveRecord::Migration
   end
 
   def down
-    drop_table :matches
+  	drop_table :brawls
   end
 end

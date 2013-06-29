@@ -11,20 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130507042601) do
+ActiveRecord::Schema.define(:version => 20130528013103) do
+
+  create_table "brawls", :force => true do |t|
+    t.integer  "week"
+    t.integer  "round"
+    t.date     "date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "brawls_pro_teams", :force => true do |t|
+    t.integer  "brawl_id"
+    t.integer  "pro_team_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "dashboards", :force => true do |t|
     t.string   "index"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "fantasy_team_players", :force => true do |t|
-    t.integer  "fantasy_team_id"
-    t.integer  "player_id"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-    t.string   "type"
   end
 
   create_table "fantasy_teams", :force => true do |t|
@@ -38,16 +45,18 @@ ActiveRecord::Schema.define(:version => 20130507042601) do
   end
 
   create_table "fantasy_teams_leagues", :force => true do |t|
-    t.integer "league_id"
-    t.integer "fantasy_team_id"
+    t.integer  "league_id"
+    t.integer  "fantasy_team_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
-  create_table "games", :force => true do |t|
-    t.integer  "match_id"
-    t.integer  "map_id"
-    t.integer  "number"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+  create_table "fantasy_teams_pro_players", :force => true do |t|
+    t.integer  "fantasy_team_id"
+    t.integer  "pro_player_id"
+    t.string   "type"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "leagues", :force => true do |t|
@@ -62,37 +71,28 @@ ActiveRecord::Schema.define(:version => 20130507042601) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "matches", :force => true do |t|
-    t.integer  "week"
-    t.integer  "round"
-    t.date     "date"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "players", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "name"
-    t.integer  "race_id"
-    t.integer  "pro_team_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  create_table "players_games", :force => true do |t|
-    t.integer  "player_id"
-    t.integer  "game_id"
-    t.boolean  "win"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "points", :force => true do |t|
     t.integer  "player_id"
     t.integer  "reason_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "pro_players", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "name"
+    t.integer  "pro_team_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "pro_players_throwdowns", :force => true do |t|
+    t.integer  "throwdown_id"
+    t.integer  "pro_player_id"
+    t.boolean  "win"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "pro_teams", :force => true do |t|
@@ -101,11 +101,18 @@ ActiveRecord::Schema.define(:version => 20130507042601) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "pro_teams_matches", :force => true do |t|
+  create_table "pro_teams_pro_players", :force => true do |t|
     t.integer  "pro_team_id"
-    t.integer  "match_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.integer  "pro_player_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "throwdowns", :force => true do |t|
+    t.integer  "brawl_id"
+    t.integer  "set"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
