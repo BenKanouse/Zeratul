@@ -1,5 +1,6 @@
 Zeratul::Application.routes.draw do
 
+  resources :pro_players , :path => :pros
   resources :dashboards
 
   # The priority is based upon order of creation:

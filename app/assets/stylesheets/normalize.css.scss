@@ -105,7 +105,10 @@ body {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
-
+a {
+  text-decoration: none;
+  color: #222;
+}
 a:focus {
     outline: thin dotted;
 }
@@ -117,6 +120,7 @@ a:focus {
 a:active,
 a:hover {
     outline: 0;
+    text-decoration: underline;
 }
 
 /* ==========================================================================
@@ -135,8 +139,8 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5em;
-    margin: 0.83em 0;
+    font-size: 1.2em;
+    margin: 0;
 }
 
 h3 {
