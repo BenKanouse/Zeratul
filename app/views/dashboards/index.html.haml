@@ -1,0 +1,38 @@
+= @team.name
+%table.players
+  .players{:style => "background: white;"}
+    %thead
+      %tr
+        %td Player Name
+        %td Current Week Score
+        %td Week Points
+        %td Overall Points
+        %td Team
+        %td Matches link
+    - @fantasy_players.each do |fantasy_player|
+      - p = fantasy_player.pro_player
+      %tbody
+        %tr
+          %td
+            = link_to p.name, p
+          %td
+            12
+          %td
+            16
+          %td
+            INFINITY!!!
+          %td
+            Kt Rolster
+          %td
+            = link_to "LINKED", "#"
+
+:javascript
+  $(function() {
+    window.router = new Zeratul.Routers.PostsRouter({
+      // things in here are for delivery to the page
+      // posts: = @posts.to_json.html_safe 
+      // i think i can specify when this is defined in the MODEL
+
+    });
+    Backbone.history.start();
+  });

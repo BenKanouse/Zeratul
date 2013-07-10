@@ -1,4 +1,4 @@
-ul {
+@mixin list_default {
   margin: 0;
   padding: 0;
   li {
@@ -6,6 +6,28 @@ ul {
   }
 }
 
-ol {
-	
+ul, ol {
+  @include list_default;
+}
+
+.manage {
+  @include list_default;
+  li {
+    display: block;
+    height: 60px;
+    background: #dcdcdc;
+
+    a {
+      position: relative;
+      float: left;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      border-top: 1px #666 solid;
+      border-bottom: 1px #ccc solid;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
 }

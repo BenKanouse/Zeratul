@@ -5,8 +5,11 @@
 
 /* -------------------------------------------------------------------------*/
 /* Layout */
+// classes and mixins
 
 .container {
   @include container;
   @include susy-grid-background;
 }
+
+

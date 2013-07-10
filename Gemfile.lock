@@ -87,6 +87,7 @@ GEM
       thor (>= 0.14.6)
     guard-minitest (0.5.0)
       guard (>= 0.4)
+    gumby-rails (1.1)
     haml (4.0.2)
       tilt
     haml-rails (0.4)
@@ -245,6 +246,7 @@ DEPENDENCIES
   compass-colors
   compass-rails (>= 1.0.3)
   guard-minitest
+  gumby-rails
   haml-rails
   jquery-rails (~> 2.2.1)
   minitest-rails
