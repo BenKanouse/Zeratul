@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130528013103) do
+ActiveRecord::Schema.define(:version => 20130722013636) do
 
   create_table "brawls", :force => true do |t|
     t.integer  "week"
@@ -76,6 +76,19 @@ ActiveRecord::Schema.define(:version => 20130528013103) do
     t.integer  "reason_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "pro_leagues", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "pro_leagues_pro_players", :force => true do |t|
+    t.integer  "pro_league_id"
+    t.integer  "pro_player_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "pro_players", :force => true do |t|
