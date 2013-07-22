@@ -9,17 +9,20 @@
 manager = Manager.create({name: "Ben"})
 pro_team = ProTeam.create({name: "SKT"})
 pro_team_2 = ProTeam.create({name: "CJ"})
-players = ProPlayer.create([{name: "Flash"},{name: "BByong"}])
-players.first.pro_teams = [pro_team]
-players.last.pro_teams = [pro_team_2]
-players.each(&:save!)
+pro_players = ProPlayer.create([{name: "Flash"},{name: "BByong"}])
+pro_players.first.pro_teams = [pro_team]
+pro_players.last.pro_teams = [pro_team_2]
+pro_players.each(&:save!)
+pro_league = ProLeague.create(name: "kespa")
+pro_league.pro_players = pro_players
+pro_league.save!
 brawl = Brawl.new()
 brawl.pro_teams = [pro_team, pro_team_2]
 brawl.save!
 throwdown = Throwdown.create({set: 1, brawl: brawl})
-players_game = ProPlayersThrowdown.new({throwdown: throwdown, pro_player: players.first, win: true})
-players_game_2 = ProPlayersThrowdown.new({throwdown: throwdown, pro_player: players.last, win: false})
+pro_players_game = ProPlayersThrowdown.new({throwdown: throwdown, pro_player: pro_players.first, win: true})
+pro_players_game_2 = ProPlayersThrowdown.new({throwdown: throwdown, pro_player: pro_players.last, win: false})
 league = League.create({name: "conservative_party_house"})
 fantasy_team = FantasyTeam.create({name: "bigbenjiblue", pro_team: pro_team, manager: manager,
-                main_pro_players: [players.first], anti_pro_players: [players.last],
+                main_pro_players: [pro_players.first], anti_pro_players: [pro_players.last],
                 leagues: [league]})
