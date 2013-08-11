@@ -9,7 +9,7 @@ set :application, "Zeratul"
 set :deploy_to, "/home/zeratul"
 
 set :scm, :git
-set :repository,  "git@github.com:BenKanouse/Zeratul.git"
+set :repository, "git@github.com:Nerazim/Zeratul.git"
 set :branch, "master"
 
 set :user, "zeratul"
