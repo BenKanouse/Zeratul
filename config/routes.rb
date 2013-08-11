@@ -1,5 +1,7 @@
 Zeratul::Application.routes.draw do
 
+  devise_for :users
+
   resources :pro_players , :path => :pros
   resources :dashboards
 

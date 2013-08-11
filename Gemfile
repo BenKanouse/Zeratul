@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'devise',         '~> 3.0.2'
 gem 'pg',             '~> 0.12'
 gem 'rails',          '~> 3.2.13'
 gem 'unicorn',        '~> 4.6.2'

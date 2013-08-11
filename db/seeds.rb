@@ -6,7 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-manager = Manager.create({name: "Ben"})
+user = User.create(email: 'test@email.com', password: 'testing12345')
+manager = Manager.create({name: "Ben", user: user})
 pro_team = ProTeam.create({name: "SKT"})
 pro_team_2 = ProTeam.create({name: "CJ"})
 pro_players = ProPlayer.create([{name: "Flash"},{name: "BByong"}])
