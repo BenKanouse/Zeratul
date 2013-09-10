@@ -1,19 +1,37 @@
+@mixin header_radius {
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+@mixin text_shawdow {
+  color: rgb(5,44,79);
+  text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+}
 html {
   font: Helvetica;
   font-size: 14pt;
-  background: #666 url('/assets/starcraft-ii-backgrounds-desktop.jpg');
+  background: #666 url('/assets/background.jpg');
 
 }
 
 /* header */
 
 #header {
-  background: white;
-  height: 75px;
+  background: linear-gradient(rgba(0,20,55,0.7) 65%,rgba(0,46,114,0.5));
+  height: 105px;
+  border-left: #dcdcdc solid 1px;
   border-bottom: #dcdcdc solid 1px;
+  border-right: #dcdcdc solid 1px;
+  color: rgba(135,231,255,0.4);
+  box-shadow: 0 -3px 14px rgba(135,231,255,0.4),0 6px 8px rgba(1,165,242,0.6);
+  padding: 17px;
   #icon {
     font-family: 'Orbitron', sarif;
-    font-size: 48px; 
+    text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+    font-size: 56px; 
   }
 }
 
@@ -21,25 +39,19 @@ html {
   height: 280px;
 }
 
-
 .main-content {
   background: #666666;
   width: 100%;
 }
 
 .right-sidebar {
-  background: white;
   height: 600px;
   h2 {
+    @include header_radius;
     border-bottom: 1px solid #666;
-    background: #dcdcdc;
+    background: #ebc728;
     min-height: 35px;
-    -webkit-border-top-left-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-    -moz-border-radius-topleft: 5px;
-    -moz-border-radius-topright: 5px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    text-align: center;
   }
 }
 
