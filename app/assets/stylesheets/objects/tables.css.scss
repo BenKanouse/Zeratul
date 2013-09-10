@@ -1,12 +1,6 @@
 @import "compass/utilities/tables";
 // alternating-rows-and-columns($even-row-color, $odd-row-color, $dark-intersection, $header-color, $footer-color)
-@mixin table {
-  width: 100%;
-  $table-color: #dcdcdc;
-  @include table-scaffolding;
-  @include inner-table-borders(1px, darken($table-color, 40%));
-  @include outer-table-borders(1px);
-  @include alternating-rows-and-columns($table-color, adjust-hue($table-color, -10deg), #222222); 
+@mixin table_link {
   a {
     position: relative;
     float: left;
@@ -14,13 +8,28 @@
     width: 100%;
     &:hover {
       background: #666 ;
-
     }
     &:active {
       background: #666 ;
       color: #dcdcdc;
     }
   }
+}
+@mixin table {
+  $table-color: #dcdcdc;
+  @include table-scaffolding;
+  @include inner-table-borders(1px, darken($table-color, 40%));
+  @include outer-table-borders(1px);
+  @include table_link;
+  background: $table-color;
+  width: 100%;
+  th {
+    background: #666;
+  }
+  tr:nth-child(odd) {
+    background-color: #99ff99;
+  }
+  // @include alternating-rows-and-columns($table-color, $table-color, #222222); 
 }
 
 .players {

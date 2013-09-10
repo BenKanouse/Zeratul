@@ -6,6 +6,31 @@
   }
 }
 
+@mixin list_link {
+  background: #dcdcdc;
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  border-top: 1px #666 solid;
+  border-bottom: 1px #ddd solid;
+  text-align: center;
+}
+
+@mixin gradient {
+  /* fallback */
+  $base-color: #aaa;
+  $end-color: #dcdcdc;
+  background-color: $base-color;
+  background-repeat: repeat-x;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($base-color), to($end-color));
+  background: -webkit-linear-gradient(top, $base-color, $end-color);
+  background: -moz-linear-gradient(top, #2F2727, #1a82f7);
+  background: -ms-linear-gradient(top, #2F2727, #1a82f7);
+  background: -o-linear-gradient(top, #2F2727, #1a82f7);
+
+}
 ul, ol {
   @include list_default;
 }
@@ -15,19 +40,13 @@ ul, ol {
   li {
     display: block;
     height: 60px;
-    background: #dcdcdc;
-
     a {
-      position: relative;
-      float: left;
-      height: 100%;
-      width: 100%;
-      text-align: center;
-      border-top: 1px #666 solid;
-      border-bottom: 1px #ccc solid;
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center;
+      @include list_link;
+      @include gradient;
+      line-height: 3;
+      &:hover {
+        background: lighten(rgb(20, 62, 110), 40%);
+      }
     }
   }
 }
