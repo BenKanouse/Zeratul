@@ -1,0 +1,18 @@
+language: ruby
+rvm:
+  - 2.0.0
+bundler_args: --without development
+script:
+  - RAILS_ENV=test
+  - bundle exec rake
+before_script:
+  - psql -c 'create database webadmit_test;' -U postgres
+  - cp config/database.yml.travis-ci config/database.yml
+  - bundle exec rake db:schema:load
+branches:
+  only:
+    - master
+notifications:
+  email:
+    on_success: change
+    on_failure: change
